@@ -1,11 +1,11 @@
 $(function() {
 	
-	$(".likes .showMore").live("click", function(e) {
+	$(document).on("click", ".likes .showMore", function(e) {
 		e.preventDefault();
 		ETSheet.loadSheet("onlineSheet", "conversation/liked.view/"+$(this).parents(".post").data("id"));
 	});
 
-	$(".likes .like-button").live("click", function(e) {
+	$(document).on("click", ".likes .like-button", function(e) {
 		e.preventDefault();
 		var area = $(this).parents(".likes");
 		area.find(".like-button").html(area.hasClass("liked") ? T("Like") : T("Unlike"));
