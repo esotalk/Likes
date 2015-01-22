@@ -112,7 +112,7 @@ public function handler_conversationController_renderBefore($sender)
 
 public function handler_conversationController_formatPostForTemplate($sender, &$formatted, $post, $conversation)
 {
-	if ($post["deleteMemberId"]) return;
+	if ($post["deleteTime"]) return;
 
 	$liked = array_key_exists(ET::$session->userId, $post["likes"]);
 
